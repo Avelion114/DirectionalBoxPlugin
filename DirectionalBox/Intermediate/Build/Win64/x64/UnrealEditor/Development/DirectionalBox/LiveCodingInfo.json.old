@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DirectionalBox.cpp.obj": [
+			"DirectionalBox.cpp.obj"
+		]
+	}
+}

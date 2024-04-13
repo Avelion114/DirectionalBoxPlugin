@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-DirectionalBox.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Steve\Documents\Unreal Projects\TheSandbox\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\Steve\Documents\Unreal Projects\TheSandbox\Plugins\DirectionalBox\Intermediate\Build\Win64\x64\UnrealEditor\Development\DirectionalBox\Module.DirectionalBox.cpp.obj"
+"C:\Users\Steve\Documents\Unreal Projects\TheSandbox\Plugins\DirectionalBox\Intermediate\Build\Win64\x64\UnrealEditor\Development\DirectionalBox\Default.rc2.res"
+/OUT:"C:\Users\Steve\Documents\Unreal Projects\TheSandbox\Plugins\DirectionalBox\Intermediate\Build\Win64\x64\UnrealEditor\Development\DirectionalBox\UnrealEditor-DirectionalBox.lib"

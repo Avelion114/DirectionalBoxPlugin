@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\directionalbox\\module.directionalbox.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\directionalbox\\definitions.directionalbox.h",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\intermediate\\build\\win64\\unrealeditor\\inc\\directionalbox\\uht\\directionalbox.init.gen.cpp",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\intermediate\\build\\win64\\unrealeditor\\inc\\directionalbox\\uht\\directionalboxcomponent.gen.cpp",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\source\\directionalbox\\public\\directionalboxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\intermediate\\build\\win64\\unrealeditor\\inc\\directionalbox\\uht\\directionalboxcomponent.generated.h",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\source\\directionalbox\\private\\directionalbox.cpp",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\source\\directionalbox\\public\\directionalbox.h",
+            "c:\\users\\steve\\documents\\unreal projects\\thesandbox\\plugins\\directionalbox\\source\\directionalbox\\private\\directionalboxcomponent.cpp",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
