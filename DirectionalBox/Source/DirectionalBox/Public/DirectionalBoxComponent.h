@@ -10,10 +10,10 @@
 
 class UDirectionalBoxComponent;
 
-UENUM(BlueprintType)
+UENUM(BlueprintType, meta=(ToolTip="Represents the six sides of a box component."))
 enum class EBoxDirection : uint8
 {
-	None = 0,
+	None = 0 UMETA(Hidden),
 	Front,
 	Right,
 	Top,
@@ -24,11 +24,11 @@ enum class EBoxDirection : uint8
 
 
 //Delegates for new overlap events that include the directional info
-DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_SevenParams(FBeginOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnBeginOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, bool, bFromSweep, const FHitResult&, SweepResult, EBoxDirection, Direction);
-DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FiveParams(FEndOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnEndOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, EBoxDirection, Direction);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_SevenParams(FBeginOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnBeginOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, bool, bFromSweep, const FHitResult&, SweepResult, EBoxDirection, BoxSide);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FiveParams(FEndOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnEndOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, EBoxDirection, BoxSide);
 
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Collision, meta=(DisplayName="Directional Box Collision", BlueprintSpawnableComponent))
 class DIRECTIONALBOX_API UDirectionalBoxComponent : public UBoxComponent
 {
 	GENERATED_BODY()
@@ -52,9 +52,18 @@ protected:
 
 public:
 
+	/*
+	 * Called when another component overlaps this component.
+	 * Also returns the side of the box that was overlapped. 
+	 */
 	UPROPERTY(BlueprintAssignable, Category = Collision)
 	FBeginOverlapWithDirectionInfoSignature OnBeginOverlapWithDirectionInfo;
 
+
+	/*
+	 * Called when another component stops overlapping this component.
+	 * Also returns the side of the box that was exited on the event.
+	 */
 	UPROPERTY(BlueprintAssignable, Category = Collision)
 	FEndOverlapWithDirectionInfoSignature OnEndOverlapWithDirectionInfo;
 
