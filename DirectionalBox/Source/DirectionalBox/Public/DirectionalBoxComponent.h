@@ -24,8 +24,17 @@ enum class EBoxDirection : uint8
 
 
 //Delegates for new overlap events that include the directional info
+/*
+ * @param BoxSide Side of the box that was entered
+ */
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_SevenParams(FBeginOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnBeginOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, bool, bFromSweep, const FHitResult&, SweepResult, EBoxDirection, BoxSide);
+
+/*
+ * @param BoxSide Side of the box that was exited
+ */
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FiveParams(FEndOverlapWithDirectionInfoSignature, UDirectionalBoxComponent, OnEndOverlapWithDirectionInfo, UPrimitiveComponent*, OverlappedComponent, AActor*, OtherActor, UPrimitiveComponent*, OtherComp, int32, OtherBodyIndex, EBoxDirection, BoxSide);
+
+
 
 
 UCLASS(ClassGroup=Collision, meta=(DisplayName="Directional Box Collision", BlueprintSpawnableComponent))
