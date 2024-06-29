@@ -55,7 +55,7 @@ FVector UDirectionalBoxComponent::GetEndOverlapLocation(UPrimitiveComponent* Oth
 {
 	FHitResult OutHit;
 	FCollisionShape Shape;
-	Shape.SetSphere(FMath::Max(GetScaledBoxExtent().X, GetScaledBoxExtent().Y));
+	Shape.SetSphere(FMath::Min(GetScaledBoxExtent().X, GetScaledBoxExtent().Y));
 
 	OtherComp->SweepComponent(OutHit, GetComponentLocation(), OtherComp->GetComponentLocation(), FQuat{ 0, 0, 0, 0 }, Shape);
 	return OutHit.ImpactPoint;
