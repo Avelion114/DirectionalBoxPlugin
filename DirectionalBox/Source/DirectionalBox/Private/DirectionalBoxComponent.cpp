@@ -7,6 +7,7 @@
 
 void UDirectionalBoxComponent::BeginPlay()
 {
+	Super::BeginPlay();
 	OnComponentBeginOverlap.AddDynamic(this, &UDirectionalBoxComponent::OnBeginOverlap);
 	OnComponentEndOverlap.AddDynamic(this, &UDirectionalBoxComponent::OnEndOverlap);
 }
