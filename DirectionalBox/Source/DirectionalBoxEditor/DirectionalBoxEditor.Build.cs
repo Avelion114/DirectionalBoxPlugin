@@ -10,14 +10,14 @@ public class DirectionalBoxEditor : ModuleRules
 
 		PublicIncludePaths.AddRange(
 			new string[] {
-				"DirectionalBoxEditor/Public"
+				
 			}
 			);
 
 
 		PrivateIncludePaths.AddRange(
 			new string[] {
-				"DirectionalBoxEditor/Private"
+				
 			}
 			);
 
